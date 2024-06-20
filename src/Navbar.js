@@ -1,12 +1,15 @@
-const Navbar = () => {
+import {Link } from "react-router-dom";
+export const Navbar = () => {
     return (
       <nav className="navbar">
         <div className="links">
-          <a href="/">Home</a>
-          <a href="/login" >Login</a>
+          <Link to="/">Home</Link>
+          <Link to="/Login">Login</Link>
+          <Link to="/Contact">Contact</Link>
+          <Link to="/UserProfile">Users</Link>
         </div>
       </nav>
     );
   }
    
-  export default Navbar;
+  
