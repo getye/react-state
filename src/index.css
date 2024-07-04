@@ -1,5 +1,5 @@
 
-/* base styles */
+
 * {
   margin: 0;
   font-family: "Quicksand";
@@ -9,8 +9,8 @@
   padding: 10px;
   display: flex;
   align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
+  margin-left: 20px;
+  margin-right: 20px;
   border-bottom: 1px solid #f2f2f2;
   background: #a2f2a2;
 }
@@ -29,12 +29,16 @@
   color: #f1356d;
 }
 .content {
-  max-width: 600px;
-  margin: 0px auto;
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 10px;
   background: #f2f2a2;
 }
 
+.errorMessage {
+  color: red;
+  font-size: small;
+}
 @media (min-width: 1025px) {
   .h-custom-2 {
     height: 100%;

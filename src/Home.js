@@ -35,15 +35,19 @@ export const Home = () => {
         <h2>State Example 2</h2>
         Name<input type="text"/>
         Email<input type="text"/>
-        <button onClick={()=>{setMore(!ismore)}}>More/Less</button>
+        <button onClick={()=>{setMore(!ismore)}}>{ismore? "Less": "More"}</button>
         <button>{ismore && 
-          <more>
-            Gender<input type="text"></input>
-            Age<input type="text"></input>
-          </more> 
+            <div>
+              Gender<input type="text"></input>
+              Age<input type="text"></input>
+              <h3>This is hidden section</h3>
+              <h3>This is hidden section</h3>
+              <h3>This is hidden section</h3>
+              <h3>This is hidden section</h3>
+            </div> 
           }</button>
         <div className="addList">
-          <h2>Dynamic list</h2>
+          <h2>Dynamic list with add and delete operations</h2>
           
           <input onChange={change}/>
           <Button onClick={addList}>Add List</Button>
