@@ -16,7 +16,7 @@ export const Home = () => {
     const change = (event) => {
       setTask(event.target.value);
     }
-
+  
     const addList = (event) => {
       setList([...list,task]);
     }
@@ -28,8 +28,8 @@ export const Home = () => {
     return (
       <div className="home">
         <h2>State Example 1</h2>
-        <button onClick={decrease}><b>-</b></button>
-              { num }   
+        <button onClick={decrease}><b> - </b></button>
+        &nbsp; { num }  &nbsp; 
         <button onClick={increase}><b>+</b></button>
 
         <h2>State Example 2</h2>
@@ -50,18 +50,17 @@ export const Home = () => {
           <h2>Dynamic list with add and delete operations</h2>
           
           <input onChange={change}/>
-          <Button onClick={addList}>Add List</Button>
+          <Button onClick={addList} className="add">Add List</Button>
+          <h3>List of Items</h3>
         </div>
         <div className="List">
-        {list.map((name) =>{
-            return <div> 
-                    {name}
-                    <Button onClick={()=>deleteList(name)} >X</Button> 
-                 </div>
-           })}
-          
-          
-          
+          <ol>
+          {list.map((name) =>{
+              return (
+                      <li>{name} &nbsp;
+                      <Button onClick={()=>deleteList(name)} className="warning"> X </Button> </li>
+                    
+            )})} </ol>     
         </div>
       </div>
     );

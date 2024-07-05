@@ -39,6 +39,20 @@
   color: red;
   font-size: small;
 }
+.warning {
+  color: red;
+  font-size: small;
+}
+.add {
+  background: rgb(0, 60, 255);
+  color: aqua;
+  font-size: small;
+}
+.List {
+  color: blue;
+  font-family: 'Times New Roman', Times, serif;
+  
+}
 @media (min-width: 1025px) {
   .h-custom-2 {
     height: 100%;

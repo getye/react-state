@@ -1,10 +1,5 @@
 
 
-import {UserProfile} from './UserProfile';
-
-
-
-
 export const Login =(props)=>{
     
     const login = "Login"
