@@ -3,7 +3,7 @@ import {Home} from "./Home";
 import {Login} from "./login";
 import {Contact} from "./Contact";
 import {Navbar} from './Navbar';
-import {Forms} from './Forms';
+import {Forms} from './Register';
 import {UserProfile} from './UserProfile';
 import { useState } from "react";
 
@@ -19,7 +19,7 @@ function App() {
               <Route path="/" element={<Home/>}/>
               <Route path="/Login" element={<Login userName={userName} setUserName={setUserName}/>}/>
               <Route path="/Contact" element={<Contact/>}/>
-              <Route path="/Forms" element={<Forms/>}/>
+              <Route path="/Register" element={<Forms/>}/>
               <Route path="/UserProfile" element={<UserProfile userName={userName} setUserName={setUserName}/>}/>
           </Routes>
         </div>
