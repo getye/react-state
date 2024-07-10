@@ -1,12 +1,9 @@
 import { Button, TextField, FormControl, Box} from "@mui/material";
-import {Link, Route, Routes, redirect } from "react-router-dom";
-import {UserProfile} from './UserProfile';
-import { useState } from "react";
+import {Link} from "react-router-dom";
 
 export const Login =(props)=>{
     
     const login = "Login"
-    const [islogin, setLogin] =useState(false);
 
 
     const change =(event)=>{

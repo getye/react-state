@@ -81,7 +81,7 @@ export const Forms =()=>{
 
             <Box component="form"
                 sx={{
-                 '& > :not(style)': { m: 0, width: 'auto', height:"25%", size:"small"} ,
+                 '& > :not(style)': { m: 0, width: 'auto', height:"25%", size:"small" } ,
                 }}autoComplete="off" >
             <Grid container spacing={2}>
                 <Grid item xs={6}>
