@@ -1,12 +1,14 @@
 import { Button, TextField, FormControl, Box} from "@mui/material";
-import {Link} from "react-router-dom";
+import { Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Login =(props)=>{
+    const navigate = useNavigate()
     
     const login = "Login"
 
 
-    const change =(event)=>{
+    const change =(event)=>{ 
         props.setUserName(event.target.value);
     }
 
@@ -15,7 +17,10 @@ export const Login =(props)=>{
         //console.log(data)
         if(props.userName==='')
             alert("please enter user name");
-        else alert("You are login as "+props.userName);
+        else {
+           alert("You are login as "+props.userName) ;
+           navigate("/UserProfile");
+        }
     }
 
    return (
@@ -33,7 +38,7 @@ export const Login =(props)=>{
        <Link to="/Register" postion="right">Don't have password</Link>
        </Box>
        
-       <h1>Your are Logging as {props.userName}</h1>
+       <h3>Your are Logging as {props.userName}</h3>
     </div>
    );
 }

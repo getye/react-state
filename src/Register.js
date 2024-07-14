@@ -85,36 +85,36 @@ export const Forms =()=>{
                 }}autoComplete="off" >
             <Grid container spacing={2}>
                 <Grid item xs={6}>
-            <TextField size="small" label="Enter Your name" variant="standard"{...register("FirstName")}/>
-                <p className="errorMessage">{errors.FirstName?.message}</p>
-            <TextField size="small" type="email" label="Enter Your email" variant="standard" {...register("Email")}/>
-                <p className="errorMessage">{errors.Email?.message}</p>
-            <TextField size="small" type="number" label="Enter Your Age" variant="standard"{...register("Age")}/> 
-                <p className="errorMessage">{errors.Age?.message}</p>
+                <label class="block text-sm font-semibold text-slate-700">Name</label>
+                <input type="text" placeholder="Enter Name" {...register("FirstName")}/>
+                   <p className="errorMessage">{errors.FirstName?.message}</p>
+                <label class="block text-sm font-semibold text-slate-700">Email</label>
+                <input type="email" placeholder="Enter Email" {...register("Email")}/>
+                   <p className="errorMessage">{errors.Email?.message}</p>
+                <label class="block text-sm font-semibold text-slate-700">Age</label>
+                <input type="number" placeholder="Enter Age" {...register("Age")}/>
+                   <p className="errorMessage">{errors.Age?.message}</p>
+                <label class="block mb-0 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Upload CV</label>
+                <input class="block w-auto text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file" {...register("CV")}/>
+                    
                 </Grid>
                 <Grid item xs={3} > 
-                <FormControl fullWidth>
-                        <InputLabel id="select-sex">Select Sex</InputLabel>
-                        <Select
-                        labelId="select-sex"
-                        id="sex"
-                        value={sex}
-                        label="Select Sex"
-                        variant="standard" {...register("Sex")}
-                        onChange={handleChange}
-                        >
-                        <MenuItem value={"Female"}>Female</MenuItem>
-                        <MenuItem value={"Male"}>Male</MenuItem>
-                        </Select>
-                    </FormControl>
+                  <select id="gender" placeholder="Select Your Gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" {...register("Sex")}>
+                    <option value={""}disabled selected>Select Your Gender</option>
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                  </select>
                 <p className="errorMessage">{errors.Sex?.message}</p>
-            <TextField size="small" type="password" label="Enter Your password" variant="standard" {...register("Password")}/>
+              <label class="block text-sm font-semibold text-slate-700">Password</label>
+              <input type="password" placeholder="Enter Password" {...register("Password")}/>
                 <p className="errorMessage">{errors.Password?.message}</p>
-            <TextField size="small" type="password" label="Confirm Your password" variant="standard" {...register("RePassword")}/>
+              <label class="block text-sm font-semibold text-slate-700">Password</label>
+              <input type="password" placeholder="Confirm Your password" {...register("RePassword")}/>
                 <p className="errorMessage">{errors.RePassword?.message}</p>
                 </Grid>
                 </Grid>
             </Box> <br/>
+
             <center><Button type="submit" variant="contained" endIcon={<SendIcon />}>submit</Button></center>
         </form>
 

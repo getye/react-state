@@ -5,26 +5,23 @@ import { Button, TextField } from "@mui/material";
 
 
 export const Counter=() =>{
-  const val = 0;
   const count = useSelector((state) => state.counter.value)
   const dispatch = useDispatch()
 
   const handleChange = (event) => {
     if (event.target.value==='')
-      dispatch(incrementByAmount(val));
+      dispatch(incrementByAmount(0));
     else dispatch(incrementByAmount(parseInt(event.target.value)));
 }
   return (
     <div>
-        <div>
-        <Button variant="contained" size="small" color="secondary"
-          onClick={() => dispatch(decrement())}>-</Button>
-            &nbsp; <span>{count}</span> &nbsp; 
-        <Button variant="contained" size="small" color="primary"
-          onClick={() => dispatch(increment())}> +</Button>
-          </div> <br/>
-        <TextField size="small" label="Enter a number" variant="outlined" type="number" onChange={handleChange} />
-        
+      <form>
+        <input type="number" class="m-3" placeholder="Enter a number" onChange={handleChange}/><br/>
+  
+        <button class="bg-pink-500 hover:bg-pink-700 w-10" onClick={() => dispatch(decrement())}>- </button> 
+        <input type="text" value={ count }  class="w-auto"/>
+        <button class="bg-sky-500 hover:bg-sky-700 w-10"  onClick={() => dispatch(increment())}>+</button>
+      </form>
     </div>
   )
 }
